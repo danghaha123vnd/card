@@ -1,0 +1,362 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+    height: 100%;
+}
+html
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#slider
+{
+    background-image: url(https://img.freepik.com/free-vector/hand-painted-background-violet-orange-colours_23-2148427578.jpg?w=2000);
+    margin-top: 0px;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+.heart
+{
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    width: 50%;
+}
+@keyframes heartmove
+{
+    
+}
+#main #slider .but #open
+{
+    font-size: 35px ;
+    font-weight: 1000;
+    color: #fff;
+    left: 50%;
+    cursor: pointer;
+    height: 75px;
+    width: 165px;
+    border-radius: 45px;
+    background-color: black;
+    border: unset;  
+}
+.but
+{
+    display: flex;
+    /* outline: none;
+    border: none; */
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 180px;
+    position: absolute;
+    cursor: pointer;
+    top: 15%;
+    transform: translateX(-50%);
+    left: 70%;
+    bottom: 85%;
+    border-radius: 50px;
+    opacity: 1.1;
+    filter: blur(0.3px);
+    background: linear-gradient(180deg, #14ffe9 ,yellow , rgba(230,0,0,1) );
+}
+.but2
+{
+    display: none;
+}
+.but2.open{
+    display:  flex;
+}
+#main #slider .but:hover
+{
+    height: 95px;
+    width: 185px;
+    opacity: 0.6;
+    color: black;
+    font-size: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.letter
+{
+    position: absolute;
+    width: 50%;
+    display: inline-block;
+}
+
+.but.close 
+{
+    display: none;
+}
+
+.modal
+{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.opentab
+{
+    display: flex;
+}
+.modal.close
+{
+    display: none;
+}
+.contain
+{
+    background-color: #fff;
+    width: 850px;
+    height: 500px;
+    position: relative;
+    border-radius: 30px;
+    max-width: calc(100%-32px);
+    animation: Transition ease 0.4s;
+    
+}
+.head-close
+{
+    position: absolute;
+    padding: 15px;
+    border-radius: 20px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: black;
+    background-color: red;
+    height: 20px;
+}
+.ti-close
+{
+    font-size:20px;
+}
+/* .tat
+{
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    border: none;
+}
+.tat :hover
+{
+    opacity: 0.7;
+}
+.mute
+{
+    border: black ;
+    cursor: pointer;
+    background-color: #fee3ac;
+    background-color:#f53500;
+    font-size: 20px;
+    border-radius: 30px;
+    width: 40px;
+
+}
+.mute.open
+{
+    display: block;
+}
+.turn
+{
+    border: black;
+    cursor: pointer;
+    background-color: #fee3ac;
+    font-size: 20px;
+    border-radius: 30px;
+    width: 40px;
+    display: none;
+}
+.turn.open
+{
+    display: block;
+} */
+
+.thu
+{
+    display: flex;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    font-style: italic;
+    line-height: 30px;
+    max-width: 750px;
+    font-size: 18px;
+}
+.conte
+{
+    border-left: 40px;
+    font-weight: 300;
+}
+.ti-themify-favicon-alt
+{
+    font-size: 35px;
+    background-color: #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.okk
+{
+    padding-top: 5px;
+    font-size: 13px;
+    font-style: normal;
+    padding-left: 10px;
+}
+.cont
+{
+    position: absolute;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    left: 180px;
+    bottom: 70px;
+    color: black;
+    height: 40px;
+    width: 600px;
+}
+.aa
+{
+    text-decoration: none;
+    color: black;
+}
+
+.res
+{
+    display: none;
+    font-size: 30px;
+    font-style:oblique;
+    color: #fff;
+    background-color: #ff065f;
+}
+@media only screen and (max-width:400px)
+{
+    .res
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+    }
+    #main
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width:900px)
+{
+    #slider
+    {
+        height: 100%;
+    }
+    .contain
+    {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    border-radius: 30px;
+    max-width: calc(100%-50px);
+    animation: Transition ease 0.4s;
+    
+    }
+    .thu
+    {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    font-style: italic;
+    line-height: 20px;
+    max-width: 480px;
+    font-size: 12.7px;
+    }
+    .cont
+    {
+    position: absolute;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    left: 70px;
+    bottom: 14px;
+    color: black;
+    height: 20px;
+    width: 2000px;
+    opacity: 0.7;
+    }
+    .ti-themify-favicon-alt
+    {   
+    font-size: 20px;
+    background-color: #ccc;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+    }
+    .okk
+    {
+    padding-top: 0px;
+    font-size: 13px;
+    font-style: normal;
+    padding-left: 10px;
+    }
+    .head-close
+    {
+    position: absolute;
+    padding: 8px;
+    border-radius: 20px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: black;
+    background-color: red;
+    height: 15px;
+    }
+    #main #slider .but #open
+    {
+        font-size: 20px ;
+        font-weight: 1000;
+        color: #fff;
+        left: 50%;
+        cursor: pointer;
+        height: 45px;
+        width: 90px;
+        border-radius: 45px;
+        background-color: black;
+        border: unset;  
+    }
+    .but
+    {
+        display: flex;
+        /* outline: none;
+        border: none; */
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 95px;
+        position: absolute;
+        cursor: pointer;
+        top: 15%;
+        transform: translateX(-50%);
+        left: 70%;
+        bottom: 85%;
+        border-radius: 50px;
+        opacity: 1.1;
+        filter: blur(0.3px);
+        background: linear-gradient(180deg, #14ffe9 ,yellow , rgba(230,0,0,1) );
+    }
+    .but2
+    {
+    display: none;
+    }
+}

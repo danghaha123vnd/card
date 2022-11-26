@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Card Love</title>
+        <link rel="stylesheet" href="./assets/CSS/style.css">
+        <link rel="stylesheet" href="./assets/Fonts/themify-icons-font/themify-icons/themify-icons.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="main">
+            <div id="slider"> 
+                <div class="heart">
+                    <img src="./assets/img/hand.png" alt="" class="let">
+                </div>
+                <div class="letter">
+                    <div class="letter">
+                        <img src="./assets/img/let.png" class="let" alt="">
+                        <div class="but" title="Baby bấm vào để xem lẹ nào kaka" >
+                            <button id="open" class="js-but" onClick="a(); ">
+                                Open
+                            </button>
+                        </div>
+                        <div class="but but2" title="Bâm dô xem lại nè" >
+                            <button id="open" class="js-but2">
+                                Review
+                            </button>
+                        </div>
+                        <!-- <div class="tat" title="Tắt nhạc" >
+                            <button class="js-mute mute">
+                                <i class="ti-power-off"></i>
+                            </button>
+                        </div>
+                        <div class="tat" title="Bật nhạc" >
+                            <button class="js-turn turn">
+                                <i class="ti-music-alt"></i>
+                            </button>
+                        </div> -->
+                    
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+        <p class="res">
+            Baby hãy để màn hình nằm ngang đi nào
+            </p>
+        <div class="modal js-modal">
+            <div class="contain">
+                <div class="head-close js-close">
+                    <i class="ti-close "></i>
+                </div>
+                <div class="thu">
+                    <p class="conte">
+                        Gửi Baby yêu dấu bé nhỏ của tui <3 </br> 
+                        Nhân ngày sinh nhật baby yêu dấu thì anh làm web này để nói cho em là, I very love u <br </br>
+                        Trời ư, anh nhạt hầu giờ mà nên đâu có biết nhắn hay nói gì màu mè, thả thính cao siêu đâu, chỉ có cái tấm chân tình 
+                        này là thực lòng nẹ kekeke. Yêu quá chời đất luông. </br>
+                        Anh yêu chúc em già thêm nè keke, bớt suy diễn tào lao nè, chúc thêm xinh gái và khỏe mạnh nữa nè, dới lại học giỏi thêm nữa kaka
+                        , đặc biệt hơn, là mãi yêu tui hehe. </br>
+                        Xong rầu, hết biết chúc thêm gì nữa rầu, dĩ thâu á, nói ít thì mong hiểu nhiều nhá. Yêu lắm á kkk </br>
+                        Tân trọng nhứt </br>
+                        TheLight đẹp trai!
+                    </p>
+                <div class="cont">
+                    <a href="https://www.messenger.com/t/100016779917908" class="aa ">
+                        <i class="ti-themify-favicon-alt "></i>
+                    </a>
+                    <div>
+                        <p class="okk"> Có gì ý kiến về lá thư thì bấm zô để  liên hệ </p>
+                     </div>  
+                </div>  
+ 
+
+                </div>
+            </div>
+        </div>
+        <script>
+            var counter = 0;
+            let play = document.getElementById("open")
+                function playMusic()
+                {
+                    let audio = new Audio("./assets/music/happy.mp3");
+                    audio.play();
+                    audio.loop = true;
+                }
+                let audio = new Audio();
+
+                function a(){
+                    if(counter < 0){
+                        counter++;
+                    } else
+                    {
+                       document.getElementById("open").disabled=true;
+                    }
+                }
+            play.addEventListener("click",playMusic);
+
+            const buyBtn = document.querySelector('.js-but')
+            const buyBtn2 = document.querySelector('.js-but2')
+            const closeBtn = document.querySelector('.js-close')
+            const modaljs = document.querySelector('.js-modal')
+            const butjs =document.querySelector('.but')
+            const butjs2 =document.querySelector('.but2')
+            function showBuy()
+            {
+                modaljs.classList.add("opentab")
+            }
+            function closeOpen()
+            {
+                butjs.classList.add("close")
+            }
+            function closeOpen2()
+            {
+                butjs2.classList.remove("open")
+            }
+            function openReview()
+            {
+                butjs2.classList.add("open")
+            }
+            function closeBuy()
+            {
+                modaljs.classList.remove("opentab")
+            }
+            buyBtn.addEventListener('click',closeOpen)  /*mất nút open*/
+            buyBtn2.addEventListener('click',closeOpen2)  /*mất nút review*/
+            buyBtn.addEventListener('click',showBuy)  //mở card
+            buyBtn2.addEventListener('click',showBuy)  //mở card 2
+            closeBtn.addEventListener('click',closeBuy)  //đóng card
+            closeBtn.addEventListener('click',openReview)
+
+        </script>
+    </body>
+</html>
